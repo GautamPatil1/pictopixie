@@ -23,9 +23,12 @@ def generate(prompt=None, image=None):
     print(f"Generated response: {response.text}")
 
 
-def response(prompt=None, image=None):
+def response(prompt="Solve.", image=None):
+    global chat_response
+    chat_response = ''
+    filepath = os.path.join('uploads', image)
     if image:
-        generate(prompt, PIL.Image.open(f"uploads/{image}"))
+        generate(prompt, PIL.Image.open(filepath))
     else:
         generate(prompt)
     return chat_response
@@ -55,7 +58,8 @@ def generate_from_pdf(prompt="Solve These Questions for me they are for 5 marks 
     for image_file in image_files:
         print(image_file)
         if image_file:
-            generate(prompt, PIL.Image.open(image_file))
+            with PIL.Image.open(image_file) as image_:
+                generate(prompt, image_)
         else:
             generate(prompt)
 

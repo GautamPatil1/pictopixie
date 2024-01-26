@@ -55,6 +55,7 @@ async def upload_file(file: UploadFile = File(None), prompt: str = Form(None)):
 
     # Save the file to disk
         file_path = os.path.join(upload_directory, file.filename)
+        print(file.filename)
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
         result = response( prompt=prompt, image=file.filename)
