@@ -1,0 +1,27 @@
+.search{
+    background-color: #00bf7d;
+    width: auto;
+    display: flex;
+    padding: 1rem;
+    border-radius: 5rem;
+    margin: 1rem;
+}
+
+.searchButton{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.searchTerm{
+    border: none;
+    background-color: transparent;
+    width: 80%;
+    color:white;
+    font-size: 1.35rem;
+}
+
+.searchTerm::placeholder{
+    color: rgb(225, 217, 217);
+}
