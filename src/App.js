@@ -2,12 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import Chat from "./components/Chat";
 import SearchBox from "./components/Search";
+import Navbar from "./components/Navbar";
 function App() {
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState([]);
 
   const updateContent = (newContent) => {
-    setContent(newContent);
-  }
+    setContent((prevContent) => [...prevContent, newContent]);
+  };
 
   return (
     <div
@@ -15,15 +16,20 @@ function App() {
       style={{
         display: "flex",
         flexDirection: "column",
-        // justifyContent: "flex-end",
         height: "100vh",
-        backgroundColor: "white",
+        backgroundColor: "#181818",
       }}
     >
-      <Chat content={"loremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsum"} />
-      <Chat content={content} />
-      <Chat content={content} />
-      <SearchBox updateContent={updateContent} />
+      <Navbar />
+      <div className="chat-container">
+        {content.map((item, index) => (
+          <Chat key={index} content={item} index={index} />
+        ))}
+      </div>
+
+      <div className="search-container">
+        <SearchBox updateContent={updateContent} />
+      </div>
     </div>
   );
 }

@@ -1,27 +1,49 @@
+
+
 .search{
-    background-color: #00bf7d;
+    background-color: #FFCF00;
     width: auto;
     display: flex;
     padding: 1rem;
-    border-radius: 5rem;
+    border-radius: 15rem;
     margin: 1rem;
+    position: fixed;
+    bottom: 0;
 }
 
 .searchButton{
     border: none;
     background-color: transparent;
-    color: white;
+    color: black;
     font-size: 1.5rem;
 }
 
+#submit-btn{
+    border-radius: 5rem;
+    height: 2.5rem;
+    width: 3rem;
+    background-color: #1f8850;
+    padding: .5rem;
+}
 .searchTerm{
     border: none;
     background-color: transparent;
     width: 80%;
-    color:white;
+    color:black;
     font-size: 1.35rem;
+    font-weight: bold;
 }
 
 .searchTerm::placeholder{
-    color: rgb(225, 217, 217);
+    color: black;
+}
+
+.searchTerm:focus{
+    outline: none;
+}
+
+.searchTerm::after{
+    content: '|';
+    caret-color: red;
+    font-weight: bolder;
 }

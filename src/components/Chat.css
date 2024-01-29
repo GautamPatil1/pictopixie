@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.chat-container{
+    margin-top: 3rem;
+    padding-bottom: 5.5rem;
+    background-color: #181818;
+}
+.Chat{
+    background-color: #cfebb6;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: auto;
+    overflow-y : visible;
+    flex-direction : column-reverse;
+    word-wrap: break-word;
+    margin: 1rem;
+    font-size: 1.2rem;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.chat-inside  p{
+    display: inline;
+}
+
+.chat-inside .fa-solid{
+    margin-right: 1rem;
+}
+.even{
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.odd{
+    background-color: #3C3C3C;
+}
+
+.robot-icon-chat{
+    margin-right: 1rem;
+    height: 25px;
+    width:  25px;
+}
