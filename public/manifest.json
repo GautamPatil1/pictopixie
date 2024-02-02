@@ -1,10 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PictoPixie",
+  "name": "PictoPixie, your go to AI buddy for solving problems.",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "logo48.png",
+      "sizes": "48x48 92x92 192x192 512x512",
       "type": "image/x-icon"
     },
     {

@@ -27,7 +27,7 @@ const Chat = (props) => {
     >
       <p className="chat-inside">
         {props.index % 2 == 0 ? (
-        user ? <img className="user-picture" src={user.picture}/> : <i class="fa-solid fa-user"></i>
+        user ? <img className="user-picture" src={user.picture}/> : <i className="fa-solid fa-user"></i>
         )
         : 
         (

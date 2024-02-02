@@ -4,7 +4,7 @@
     background-color: #FFCF00;
     width: auto;
     display: flex;
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 15rem;
     margin: 1rem;
     position: fixed;
@@ -20,7 +20,7 @@
 
 #submit-btn{
     border-radius: 5rem;
-    height: 2.5rem;
+    height: 2.75rem;
     width: 3rem;
     background-color: #1f8850;
     padding: .5rem;
@@ -46,4 +46,11 @@
     content: '|';
     caret-color: red;
     font-weight: bolder;
+}
+
+@media (min-width:768px){
+    .search{
+        margin: 1rem 27.5rem;
+        width: 40%;
+    }
 }

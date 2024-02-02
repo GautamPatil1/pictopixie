@@ -17,11 +17,13 @@ const SearchBox = ({ updateContent }) => {
     setSearchTerm(event.target.value);
   };
 
+
   const submitPrompt = (event) => {
     event.preventDefault();
     setLoading(true);
-    updateContent(searchTerm);
-    formData.append("prompt", searchTerm);
+    const prompt = searchTerm || "Solve.";
+    updateContent(prompt);
+    formData.append("prompt", prompt);
 
     fetch(`${serverEndpoint}/upload`, {
       method: "POST",
@@ -29,7 +31,6 @@ const SearchBox = ({ updateContent }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Response from server:", data);
         updateContent(data.Result);
       })
       .catch((error) => {
@@ -54,9 +55,7 @@ const SearchBox = ({ updateContent }) => {
         fileType === "image/jpg"
       ) {
         // Construct form data
-
         formData.append("file", selectedFile);
-
         // Send the file via API
       } else {
         alert("Please select a PDF, PNG, JPEG, or JPG file.");
@@ -109,11 +108,11 @@ const SearchBox = ({ updateContent }) => {
       />
       {isLoading ? (
         <button type="submit" className="searchButton" onClick={submitPrompt}>
-          <i class="fa-solid fa-spinner fa-spin"></i>
+          <i className="fa-solid fa-spinner fa-spin"></i>
         </button>
       ) : (
         <button type="submit" id="submit-btn" className="searchButton" onClick={submitPrompt}>
-          <i class="fa-solid fa-arrow-up"></i>
+          <i className="fa-solid fa-arrow-up"></i>
         </button>
       )}
     </div>

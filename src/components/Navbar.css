@@ -20,17 +20,18 @@
     font-size: 2.5rem;
     margin-left: 1rem;
     font-weight: bolder;
+    font-family: 'Nunito', sans-serif;
 }
 
 .user{
-    margin-right: 3rem;
+    margin-right: 2rem;
 }
 
 .user img{
     margin-top: .25rem;
     height: 42px;
-    border: 1px white solid;
     border-radius: 5rem;
+    cursor: pointer;
 }
 
 .user-picture{
@@ -40,4 +41,8 @@
 }
 
 
-
+@media (min-width: 768px){
+    .user{
+        margin-right: 3rem;
+    }
+}

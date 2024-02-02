@@ -3,15 +3,13 @@ import "./Navbar.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
-  const { user, loginWithRedirect, logout } = useAuth0();
-  console.log(user);
-  console.log("Gautam")
+  const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0();
   return (
     <div className="navbar-container">
 
       <span>
         <span className="logo">
-          <img className="logo" src={process.env.PUBLIC_URL + '/bot.png'} alt="" srcset="" />
+          <img className="logo" src={process.env.PUBLIC_URL + '/bot.png'} alt="" srcSet="" />
         </span>
 
         <span className="company-name">PictoPixie</span>
@@ -19,7 +17,7 @@ const Navbar = () => {
 
       <span className="user">
         {
-          user ? (<img src={user.picture} alt="user-picture" onClick={user ? loginWithRedirect : logout} />) : (<i class="fa-solid fa-user" onClick={user ? loginWithRedirect : logout}></i>)
+          user ? (<img referrerPolicy="no-referrer" src={user.picture} alt="user" onClick={user ? logout : loginWithRedirect} />) : (<i className="fa-solid fa-user" onClick={user ? logout : loginWithRedirect}></i>)
         }
       </span>
 
