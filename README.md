@@ -10,7 +10,7 @@
 
  Prequisites:
 
-- MongoDB URI for MongoDB Atlas Server.
+- MongoDB URI for MongoDB Atlas Server.(Change env Files)
 - Docker Installed.
 
 - Fork the Repository with `git clone https://github.com/`
