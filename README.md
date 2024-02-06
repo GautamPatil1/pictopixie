@@ -4,6 +4,11 @@
 
 ![PictoPixie-Laptop](/pictopixie-laptop.png)
 
+## Information:
+
+**Created using following technologies:**
+- 
+
 ## Installation
 
 **Installation Using Docker & Docker Compose:**
