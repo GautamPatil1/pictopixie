@@ -2,9 +2,7 @@ version: '3'
 
 services:
   frontend:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
+    image: gautampatil1/pictopixie-client:latest
     ports:
       - "6000:3000"
     depends_on:
@@ -14,9 +12,7 @@ services:
 
 
   backend:
-    build:
-      context: ./server
-      dockerfile: Dockerfile
+    image: gautampatil1/pictopixie-server:latest
     ports:
       - "4000:8000"
     
