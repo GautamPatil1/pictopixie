@@ -1,8 +1,0 @@
-POST http://localhost:8000/users/posts/ HTTP/1.1
-accept: application/json
-Content-Type: application/json
-
-{
-  "userSub": "string",
-  "content": ["sheesh", "sheesh"]
-}
