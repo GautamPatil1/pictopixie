@@ -13,6 +13,7 @@
 - Auth0
 - TypeScript
 - Cloudfared
+- Github Actions
 
 ## Installation
 
