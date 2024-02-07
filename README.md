@@ -4,7 +4,7 @@
 
 ![PictoPixie-Laptop](/pictopixie-laptop.png)
 
-## Information:
+## Information
 
 **Created using following technologies:**
 
