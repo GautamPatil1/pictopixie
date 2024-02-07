@@ -14,6 +14,7 @@
 - TypeScript
 - Cloudfared
 - Github Actions
+- Github Pages
 
 ## Installation
 
