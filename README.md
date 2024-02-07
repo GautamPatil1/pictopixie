@@ -7,7 +7,12 @@
 ## Information:
 
 **Created using following technologies:**
-- 
+
+- React
+- FastAPI
+- Auth0
+- TypeScript
+- Cloudfared
 
 ## Installation
 
